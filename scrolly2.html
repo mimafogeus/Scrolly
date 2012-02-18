@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+    <title>Scrolly Experiment</title>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.overscroll.min.js"></script>
+	<script src="js/scrolly.js"></script>
+	<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+    <script>
+    	var ua = navigator.userAgent.toLowerCase(); 
+		var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile"); 
+		
+		$(window).load(function(){
+			if (!isAndroid) {
+				$(".bigContainer").scrolly({"showHeaderPosition" : "bottomTitleIn"});
+			}
+			$(window).resize(function () {$(".bigContainer").height($(window).height())}).resize()
+        });
+    </script>
+	<link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css"/>
+</head>
+<body>
+	<div id="bigContainer" class="bigContainer">
+		<article id="article1">
+			<h1>Welcome</h1>
+			<aside>
+				This text remains static under the title
+			</aside>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a felis eu leo blandit tempor vel quis eros. Aliquam turpis lorem, pulvinar et luctus a, pharetra quis libero. Sed vitae purus lorem. Pellentesque lacinia egestas lacinia. Maecenas ut tellus vel nunc ultricies egestas. Sed id nulla id eros commodo aliquam. Cras est massa, mattis id malesuada ac, pharetra vitae lacus. Nullam ligula nulla, pellentesque sit amet pellentesque eget, convallis nec elit. Donec lobortis nisi dolor, vel adipiscing lorem. Vestibulum nisl nibh, ullamcorper ut egestas id, vulputate ac velit. Praesent tincidunt, urna eu rutrum consequat, velit arcu vulputate arcu, eget euismod ligula nunc ut massa. Mauris sit amet tortor nisi, vel fermentum augue. Aenean hendrerit interdum diam ac pellentesque.</p>
+			
+		</article>
+		
+		<article id="article2">
+			<h1>This is a second article</h1>
+			<aside>
+				This text remains static under the title
+			</aside>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a felis eu leo blandit tempor vel quis eros. Aliquam turpis lorem, pulvinar et luctus a, pharetra quis libero. Sed vitae purus lorem. Pellentesque lacinia egestas lacinia. Maecenas ut tellus vel nunc ultricies egestas. Sed id nulla id eros commodo aliquam. Cras est massa, mattis id malesuada ac, pharetra vitae lacus. Nullam ligula nulla, pellentesque sit amet pellentesque eget, convallis nec elit. Donec lobortis nisi dolor, vel adipiscing lorem. Vestibulum nisl nibh, ullamcorper ut egestas id, vulputate ac velit. Praesent tincidunt, urna eu rutrum consequat, velit arcu vulputate arcu, eget euismod ligula nunc ut massa. Mauris sit amet tortor nisi, vel fermentum augue. Aenean hendrerit interdum diam ac pellentesque.</p>
+			<p>Nullam luctus mattis odio, quis venenatis ligula vestibulum ac. Aliquam ultricies, magna eget ornare ultrices, erat diam tempor justo, eu faucibus est leo in libero. Aliquam lacinia purus non magna condimentum eget tempor nunc porta. Aliquam tempor nisl nec ipsum sodales ullamcorper. Ut egestas iaculis sem nec vehicula. Nullam commodo nunc id eros condimentum nec sollicitudin sapien viverra. Sed aliquam dolor non lectus mollis vitae cursus lectus gravida. Maecenas porttitor placerat lacus ac sollicitudin. Praesent ultrices, odio ac luctus porttitor, nulla augue vulputate sem, in hendrerit justo est id neque.</p>
+			<p>Vivamus ullamcorper libero et dolor pulvinar eget imperdiet ligula semper. In mollis rutrum vestibulum. Nullam elementum turpis et lectus consectetur non mollis tortor lobortis. Sed non commodo purus. Nam ultricies placerat sollicitudin. Curabitur id orci et lacus laoreet iaculis. Mauris at tellus sed augue imperdiet eleifend a sodales dui. Nulla facilisi.</p>
+			<p>Suspendisse potenti. Ut tincidunt faucibus lacus auctor porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt odio id ligula malesuada rutrum ut ut nisi. In elit dolor, venenatis sed imperdiet ac, convallis id neque. Maecenas et erat eu ante sollicitudin rutrum. Praesent pretium enim at justo tempor at auctor nisi porta. Duis non eros nunc, vitae scelerisque velit. Mauris aliquet urna vel dolor ultricies fringilla. Donec ut nunc at nunc aliquet bibendum et at velit. Nunc nisl erat, accumsan id tincidunt a, laoreet eget lectus.</p>
+			<p>Morbi enim purus, hendrerit non porta porttitor, porta sit amet nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent venenatis luctus sem semper commodo. Pellentesque pellentesque leo a libero interdum id facilisis nisl dapibus. Nullam vel interdum elit. Ut in placerat arcu. Etiam iaculis dictum leo, vel tincidunt dui aliquet quis. Vestibulum ac lectus ac magna cursus suscipit vel id quam. Sed hendrerit pellentesque sem in vestibulum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a felis eu leo blandit tempor vel quis eros. Aliquam turpis lorem, pulvinar et luctus a, pharetra quis libero. Sed vitae purus lorem. Pellentesque lacinia egestas lacinia. Maecenas ut tellus vel nunc ultricies egestas. Sed id nulla id eros commodo aliquam. Cras est massa, mattis id malesuada ac, pharetra vitae lacus. Nullam ligula nulla, pellentesque sit amet pellentesque eget, convallis nec elit. Donec lobortis nisi dolor, vel adipiscing lorem. Vestibulum nisl nibh, ullamcorper ut egestas id, vulputate ac velit. Praesent tincidunt, urna eu rutrum consequat, velit arcu vulputate arcu, eget euismod ligula nunc ut massa. Mauris sit amet tortor nisi, vel fermentum augue. Aenean hendrerit interdum diam ac pellentesque.</p>
+			<p>Nullam luctus mattis odio, quis venenatis ligula vestibulum ac. Aliquam ultricies, magna eget ornare ultrices, erat diam tempor justo, eu faucibus est leo in libero. Aliquam lacinia purus non magna condimentum eget tempor nunc porta. Aliquam tempor nisl nec ipsum sodales ullamcorper. Ut egestas iaculis sem nec vehicula. Nullam commodo nunc id eros condimentum nec sollicitudin sapien viverra. Sed aliquam dolor non lectus mollis vitae cursus lectus gravida. Maecenas porttitor placerat lacus ac sollicitudin. Praesent ultrices, odio ac luctus porttitor, nulla augue vulputate sem, in hendrerit justo est id neque.</p>
+			<p>Vivamus ullamcorper libero et dolor pulvinar eget imperdiet ligula semper. In mollis rutrum vestibulum. Nullam elementum turpis et lectus consectetur non mollis tortor lobortis. Sed non commodo purus. Nam ultricies placerat sollicitudin. Curabitur id orci et lacus laoreet iaculis. Mauris at tellus sed augue imperdiet eleifend a sodales dui. Nulla facilisi.</p>
+			<p>Suspendisse potenti. Ut tincidunt faucibus lacus auctor porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt odio id ligula malesuada rutrum ut ut nisi. In elit dolor, venenatis sed imperdiet ac, convallis id neque. Maecenas et erat eu ante sollicitudin rutrum. Praesent pretium enim at justo tempor at auctor nisi porta. Duis non eros nunc, vitae scelerisque velit. Mauris aliquet urna vel dolor ultricies fringilla. Donec ut nunc at nunc aliquet bibendum et at velit. Nunc nisl erat, accumsan id tincidunt a, laoreet eget lectus.</p>
+			<p>Morbi enim purus, hendrerit non porta porttitor, porta sit amet nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent venenatis luctus sem semper commodo. Pellentesque pellentesque leo a libero interdum id facilisis nisl dapibus. Nullam vel interdum elit. Ut in placerat arcu. Etiam iaculis dictum leo, vel tincidunt dui aliquet quis. Vestibulum ac lectus ac magna cursus suscipit vel id quam. Sed hendrerit pellentesque sem in vestibulum.</p>
+		</article>
+		
+		<article id="article3">
+			<h1>And this is a third one</h1>
+			<aside>
+				This text remains static under the title
+			</aside>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a felis eu leo blandit tempor vel quis eros. Aliquam turpis lorem, pulvinar et luctus a, pharetra quis libero. Sed vitae purus lorem. Pellentesque lacinia egestas lacinia. Maecenas ut tellus vel nunc ultricies egestas. Sed id nulla id eros commodo aliquam. Cras est massa, mattis id malesuada ac, pharetra vitae lacus. Nullam ligula nulla, pellentesque sit amet pellentesque eget, convallis nec elit. Donec lobortis nisi dolor, vel adipiscing lorem. Vestibulum nisl nibh, ullamcorper ut egestas id, vulputate ac velit. Praesent tincidunt, urna eu rutrum consequat, velit arcu vulputate arcu, eget euismod ligula nunc ut massa. Mauris sit amet tortor nisi, vel fermentum augue. Aenean hendrerit interdum diam ac pellentesque.</p>
+			<p>Nullam luctus mattis odio, quis venenatis ligula vestibulum ac. Aliquam ultricies, magna eget ornare ultrices, erat diam tempor justo, eu faucibus est leo in libero. Aliquam lacinia purus non magna condimentum eget tempor nunc porta. Aliquam tempor nisl nec ipsum sodales ullamcorper. Ut egestas iaculis sem nec vehicula. Nullam commodo nunc id eros condimentum nec sollicitudin sapien viverra. Sed aliquam dolor non lectus mollis vitae cursus lectus gravida. Maecenas porttitor placerat lacus ac sollicitudin. Praesent ultrices, odio ac luctus porttitor, nulla augue vulputate sem, in hendrerit justo est id neque.</p>
+			<p>Vivamus ullamcorper libero et dolor pulvinar eget imperdiet ligula semper. In mollis rutrum vestibulum. Nullam elementum turpis et lectus consectetur non mollis tortor lobortis. Sed non commodo purus. Nam ultricies placerat sollicitudin. Curabitur id orci et lacus laoreet iaculis. Mauris at tellus sed augue imperdiet eleifend a sodales dui. Nulla facilisi.</p>
+			<p>Suspendisse potenti. Ut tincidunt faucibus lacus auctor porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt odio id ligula malesuada rutrum ut ut nisi. In elit dolor, venenatis sed imperdiet ac, convallis id neque. Maecenas et erat eu ante sollicitudin rutrum. Praesent pretium enim at justo tempor at auctor nisi porta. Duis non eros nunc, vitae scelerisque velit. Mauris aliquet urna vel dolor ultricies fringilla. Donec ut nunc at nunc aliquet bibendum et at velit. Nunc nisl erat, accumsan id tincidunt a, laoreet eget lectus.</p>
+			<p>Morbi enim purus, hendrerit non porta porttitor, porta sit amet nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent venenatis luctus sem semper commodo. Pellentesque pellentesque leo a libero interdum id facilisis nisl dapibus. Nullam vel interdum elit. Ut in placerat arcu. Etiam iaculis dictum leo, vel tincidunt dui aliquet quis. Vestibulum ac lectus ac magna cursus suscipit vel id quam. Sed hendrerit pellentesque sem in vestibulum.</p>
+		</article>
+		
+		<article id="article4">
+			<h1>And this is a fourth one</h1>
+			<aside>
+				This text remains static under the title
+			</aside>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a felis eu leo blandit tempor vel quis eros. Aliquam turpis lorem, pulvinar et luctus a, pharetra quis libero. Sed vitae purus lorem. Pellentesque lacinia egestas lacinia. Maecenas ut tellus vel nunc ultricies egestas. Sed id nulla id eros commodo aliquam. Cras est massa, mattis id malesuada ac, pharetra vitae lacus. Nullam ligula nulla, pellentesque sit amet pellentesque eget, convallis nec elit. Donec lobortis nisi dolor, vel adipiscing lorem. Vestibulum nisl nibh, ullamcorper ut egestas id, vulputate ac velit. Praesent tincidunt, urna eu rutrum consequat, velit arcu vulputate arcu, eget euismod ligula nunc ut massa. Mauris sit amet tortor nisi, vel fermentum augue. Aenean hendrerit interdum diam ac pellentesque.</p>
+			<p>Nullam luctus mattis odio, quis venenatis ligula vestibulum ac. Aliquam ultricies, magna eget ornare ultrices, erat diam tempor justo, eu faucibus est leo in libero. Aliquam lacinia purus non magna condimentum eget tempor nunc porta. Aliquam tempor nisl nec ipsum sodales ullamcorper. Ut egestas iaculis sem nec vehicula. Nullam commodo nunc id eros condimentum nec sollicitudin sapien viverra. Sed aliquam dolor non lectus mollis vitae cursus lectus gravida. Maecenas porttitor placerat lacus ac sollicitudin. Praesent ultrices, odio ac luctus porttitor, nulla augue vulputate sem, in hendrerit justo est id neque.</p>
+			<p>Vivamus ullamcorper libero et dolor pulvinar eget imperdiet ligula semper. In mollis rutrum vestibulum. Nullam elementum turpis et lectus consectetur non mollis tortor lobortis. Sed non commodo purus. Nam ultricies placerat sollicitudin. Curabitur id orci et lacus laoreet iaculis. Mauris at tellus sed augue imperdiet eleifend a sodales dui. Nulla facilisi.</p>
+			<p>Suspendisse potenti. Ut tincidunt faucibus lacus auctor porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt odio id ligula malesuada rutrum ut ut nisi. In elit dolor, venenatis sed imperdiet ac, convallis id neque. Maecenas et erat eu ante sollicitudin rutrum. Praesent pretium enim at justo tempor at auctor nisi porta. Duis non eros nunc, vitae scelerisque velit. Mauris aliquet urna vel dolor ultricies fringilla. Donec ut nunc at nunc aliquet bibendum et at velit. Nunc nisl erat, accumsan id tincidunt a, laoreet eget lectus.</p>
+			<p>Morbi enim purus, hendrerit non porta porttitor, porta sit amet nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent venenatis luctus sem semper commodo. Pellentesque pellentesque leo a libero interdum id facilisis nisl dapibus. Nullam vel interdum elit. Ut in placerat arcu. Etiam iaculis dictum leo, vel tincidunt dui aliquet quis. Vestibulum ac lectus ac magna cursus suscipit vel id quam. Sed hendrerit pellentesque sem in vestibulum.</p>
+		</article>
+	</div>
+</body>

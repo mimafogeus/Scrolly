@@ -1,0 +1,95 @@
+/* Scrolly CSS */
+
+div.headersContainer {
+	width: 100%;
+}
+
+div.header {
+	background: #f00;
+	width: 100%;
+}
+
+#topHeadersContainer, #bottomHeadersContainer {
+	position: relative;
+}
+
+#topHeadersContainer *, #bottomHeadersContainer * {
+	z-index: 10;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.fakeHeader {
+	position: fixed;
+	padding-left: 10%;
+	width: 90%;
+	font-size: 18pt;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.bottomFake {
+	position: fixed;
+	bottom: 0;
+	height: 1.5em;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Body CSS */
+
+body {
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	margin: 0;
+	overflow: hidden;
+}
+
+.bigContainer {
+	height: 100px;
+	width: 100%;
+	position: relative;
+	overflow-y: scroll;
+}
+
+article {
+	padding: 0 10% 0;
+	position: relative;
+	overflow: auto;
+	z-index: 5;
+}
+
+article h1 {
+	margin: 0 2px;
+	float:left;
+	width: 100%;
+	font-size: 18pt;
+	cursor: pointer;
+}
+
+article aside {
+	float: left;
+	width: 18%;
+	font-size: 12pt;
+}
+
+article p {
+	float: right;
+	width: 80%;
+	margin-top: 0;
+	font-size: 12pt;
+}
+
+/** article-specific design **/
+#article1, #topFake0, #bottomFake0 {
+	background: #fe5;
+}
+
+#article2, #topFake1, #bottomFake1 {
+	background: #afe;
+}
+
+#article3, #topFake2, #bottomFake2 {
+	background: #eaf;
+}
